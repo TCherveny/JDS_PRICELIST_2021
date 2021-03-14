@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JDS_PRICELIST_2021", "JDS_PRICELIST_2021.csproj", "{CEFAC381-01A1-49D4-8A7A-052607D645F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEFAC381-01A1-49D4-8A7A-052607D645F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFAC381-01A1-49D4-8A7A-052607D645F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFAC381-01A1-49D4-8A7A-052607D645F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFAC381-01A1-49D4-8A7A-052607D645F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C0F7E83-6025-4A0B-840A-95AEC8C98008}
+	EndGlobalSection
+EndGlobal
