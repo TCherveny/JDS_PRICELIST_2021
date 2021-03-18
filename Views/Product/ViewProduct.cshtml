@@ -1,0 +1,64 @@
+﻿@model products
+
+<h3>JDS Products</h3>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Category ID</th>
+        <th>Product ID</th>
+        <th>Case Quantity</th>
+        <th>A-Plus Price</th>
+        <th>LTC Price</th>
+        <th>One Case Price</th>
+        <th>Five Case Price</th>
+        <th>Ten Case Price</th>
+        <th>Gender</th>
+        <th>Material</th>
+        <th>Weight</th>
+        <th>Color</th>
+        <th>Size</th>
+        <th>Length</th>
+        <th>Width</th>
+        <th>Height</th>
+        <th>Keywords</th>
+        <th>Image</th>
+    </tr>
+
+
+    <tr>
+        <td>@Model.ItemID</td>
+        <td>@Model.SHORT_DESCRIPTION</td>
+        <td>@Model.CLASS</td>
+        <td>@Model.ITEM</td>
+        <td>@Model.CASE_QTY</td>
+        <td>@Model.TEN_CASE</td>
+        <td>@Model.LESS_THAN_CASE_PRICE</td>
+        <td>@Model.ONE_CASE</td>
+        <td>@Model.FIVE_CASE</td>
+        <td>@Model.TEN_CASE</td>
+        <td>@Model.GENDER</td>
+        <td>@Model.MATERIAL</td>
+        <td>@Model.WEIGHT</td>
+        <td>@Model.COLOR</td>
+        <td>@Model.SIZE</td>
+        <td>@Model.LENGTH</td>
+        <td>@Model.WIDTH</td>
+        <td>@Model.HEIGHT</td>
+        <td>@Model.KEYWORD</td>
+        <td>@Model.IMAGE</td>
+    </tr>
+
+
+</table>
+<div style="display: block">
+    <a href="/Product/UpdateProduct/@Model.ItemID">Update this Product</a>
+</div>
+<div style="display: block">
+    @using (Html.BeginForm("DeleteProduct", "Product", "Post"))
+    {
+        <input type="hidden" asp-for="ItemID" value="@Model.ItemID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this product" />
+    }
+</div>
+

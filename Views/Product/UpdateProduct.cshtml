@@ -1,0 +1,34 @@
+﻿@model products
+
+<h2>Update @Model.ItemID</h2>
+
+@using (Html.BeginForm("UpdateProductToDatabase", "Product", "Post"))
+{
+    <input asp-for="ItemID" type="hidden" value="@Model.ItemID" />
+
+    
+    
+    <label asp-for="SHORT_DESCRIPTION" class="control-label">Description</label>
+
+    <input type="text" name="SHORT_DESCRIPTION" class="form-control" value="@Model.SHORT_DESCRIPTION" />
+
+   
+    <label asp-for="LESS_THAN_CASE_PRICE" class="control-label">Price_LTC</label>
+
+    <input type="number" step="0.001" name="LESS_THAN_CASE_PRICE" class="form-control" value="@Model.LESS_THAN_CASE_PRICE" />
+    
+   
+    <label asp-for="ONE_CASE" class="control-label">Price_One</label>
+
+    <input type="number" step="0.001" name="ONE_CASE" class="form-control" value="@Model.ONE_CASE" />
+
+   
+    <label asp-for="TEN_CASE" class="control-label">Price_Ten</label>
+
+    <input type="number" step="0.001" name="TEN_CASE" class="form-control" value="@Model.TEN_CASE" />
+
+    
+    <input type="submit" value="Update Product" class="btn btn-primary" />
+
+}
+

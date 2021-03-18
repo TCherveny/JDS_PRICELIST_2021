@@ -1,0 +1,94 @@
+﻿@model products
+<h2>Create a New Product</h2>
+@using (Html.BeginForm("InsertProductToDatabase", "Product", "Post"))
+{
+    <input asp-for="ItemID" type="hidden" value="" />
+
+    <label asp-for="SHORT_DESCRIPTION" class="control-label">Name</label>
+    <input type="text" name="SHORT_DESCRIPTION" class="form-control" value="" />
+
+    <label asp-for="CLASS" class="control-label">Class</label>
+    <input type="text" name="CLASS" class="form-control" value="" />
+
+    <label asp-for="ITEM" class="control-label">Item</label>
+    <input type="text" name="ITEM" class="form-control" value="" />
+
+    <label asp-for="CASE_QTY" class="control-label">Case Quantity</label>
+    <input type="number" step="0.01" name="CASE_QTY" class="form-control" />
+
+    <label asp-for="LESS_THAN_CASE_PRICE" class="control-label">LTC Price</label>
+    <input type="number" step="0.01" name="LESS_THAN_CASE_PRICE" class="form-control" />
+
+    <label asp-for="ONE_CASE" class="control-label">One Case Price</label>
+    <input type="number" step="0.01" name="ONE_CASE" class="form-control" />
+
+    <label asp-for="FIVE_CASE" class="control-label">Five Case Price</label>
+    <input type="number" step="0.01" name="FIVE_CASE" class="form-control" />
+
+    <label asp-for="TEN_CASE" class="control-label">Ten Case Price</label>
+    <input type="number" step="0.01" name="TEN_CASE" class="form-control" />
+
+    <label asp-for="GENDER" class="control-label">Gender</label>
+    <input type="text" name="GENDER" class="form-control" value="" />
+
+    <label asp-for="MATERIAL" class="control-label">Material</label>
+    <input type="text" name="MATERIAL" class="form-control" value="" />
+
+    <label asp-for="WEIGHT" class="control-label">Weight</label>
+    <input type="number" step="0.01" name="WEIGHT" class="form-control" />
+
+    <label asp-for="COLOR" class="control-label">Color</label>
+    <input type="text" name="COLOR" class="form-control" value="" />
+
+    <label asp-for="SIZE" class="control-label">Size</label>
+    <input type="text" name="SIZE" class="form-control" value="" />
+
+    <label asp-for="LENGTH" class="control-label">Length</label>
+    <input type="number" step="0.01" name="LENGTH" class="form-control" />
+
+    <label asp-for="WIDTH" class="control-label">Width</label>
+    <input type="number" step="0.01" name="WIDTH" class="form-control" />
+
+    <label asp-for="HEIGHT" class="control-label">Height</label>
+    <input type="number" step="0.01" name="HEIGHT" class="form-control" />
+
+    <label asp-for="KEYWORD" class="control-label">Keywords</label>
+    <input type="text" name="KEYWORD" class="form-control" value="" />
+
+    <label asp-for="IMAGE" class="control-label">Image</label>
+    <input type="text" name="IMAGE" class="form-control" value="" />
+
+    <label asp-for="LONG_DESCRIPTION" class="control-label">Long Description</label>
+    <input type="text" name="LONG_DESCRIPTION" class="form-control" value="" />
+
+    <label asp-for="PRICE_BREAK_4" class="control-label">Price Break 4</label>
+    <input type="number" step="0.01" name="PRICE_BREAK_4" class="form-control" />
+
+    <label asp-for="PRICE_BREAK_5" class="control-label">Price Break 5</label>
+    <input type="number" step="0.01" name="PRICE_BREAK_5" class="form-control" />
+
+    <label asp-for="PAGE" class="control-label">Page</label>
+    <input type="number" step="1" name="HEIGHT" class="form-control" />
+
+    <label asp-for="DESCRIPTION_2" class="control-label">Description 2</label>
+    <input type="text" name="DESCRIPTION_2" class="form-control" value="" />
+
+    <label asp-for="DESCRIPTION_1" class="control-label">Description 1</label>
+    <input type="text" name="DESCRIPTION_1" class="form-control" value="" />
+
+
+
+
+
+    @*<div class="form-group">
+            <label for="">Select a Category</label>
+            <select class="form-control" name="CategoryID" value="">
+                @foreach (var cat in Model.Items)
+                {
+                    <option value="@cat.ItemID">@cat.ItemID @cat.SHORT_DESCRIPTION</option>
+                }
+            </select>
+        </div>*@
+
+    <input type="submit" value="Create Product" class="btn btn-primary" />
+}

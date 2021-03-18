@@ -1,0 +1,35 @@
+﻿@model IEnumerable<products>
+
+<h2>JDS Products</h2>
+
+<div style="display: block">
+    <a href="/Product/InsertProduct/">Create a New Product</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Product ID</th>
+        <th>Case Quantity</th>
+        <th>A-Plus Price</th>
+        <th>LTC Price</th>
+    </tr>
+
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>
+                <a href=/Product/ViewProduct/@product.ItemID>@product.ItemID</a>
+            </td>
+            <td>@product.SHORT_DESCRIPTION</td>
+            <td>@product.CLASS</td>
+            <td>@product.CASE_QTY</td>
+            <td>@product.TEN_CASE</td>
+            <td>@product.LESS_THAN_CASE_PRICE</td>
+        </tr>
+
+    }
+</table>
+
+
