@@ -57,5 +57,11 @@ namespace JDS_PRICELIST_2021.Controllers
             repo.DeleteProduct(product);
             return RedirectToAction("Index");
         }
+
+        public IActionResult KeywordSearch(string searchString)
+        {
+            var search = repo.SearchProduct(searchString);
+            return View(search);
+        }
     }
 }

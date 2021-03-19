@@ -17,7 +17,7 @@ namespace JDS_PRICELIST_2021
         public IEnumerable<Item> GetItems();
         public products AssignItem();
         public void DeleteProduct(products product);
-            
+        public IEnumerable<products> SearchProduct(string search);    
     }
 
 }
